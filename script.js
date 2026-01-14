@@ -122,7 +122,7 @@ function readTasks() {
 
   speak(text);
 }
-const name
+
 
 function speak(text) {
   const utterance = new SpeechSynthesisUtterance(text);
@@ -138,13 +138,13 @@ function convertTo12Hour(timeStr) {
   const [hourStr, minute] = timeStr.split(":");
   let hour = parseInt(hourStr, 10);
   const ampm = hour >= 12 ? "PM" : "AM";
-  hour = hour % 12 || 12;
+  hour = hour % 12 || 12
   return `${hour}:${minute} ${ampm}`;
 }
 
 // Initial load
 window.addEventListener("load", () => {
-  loadVoices();
+  loadVoices();1
   if (datePicker.value) {
     showTask(datePicker.value);
   }
